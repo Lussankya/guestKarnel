@@ -4,7 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin="" />
     <link href="~/css/style-starter.css" rel="stylesheet" />
     <a href="~/fonts/fontawesome-webfont.eot"></a>
     <img src="~/fonts/fontawesome-webfont.svg" />
@@ -56,6 +58,9 @@
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
           rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+            integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+            crossorigin=""></script>
     <!-- google fonts -->
     <!-- Template CSS -->
     <link rel="stylesheet" href="~/css/style-starter.css">
@@ -94,13 +99,24 @@
                         <li class="nav-item">
                             @Html.ActionLink("About", "About", "About", new { @class = "nav-link" })
                         </li>
-
+                        <li class="nav-item">
+                            @Html.ActionLink("Tour", "Tour", "Tour", new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Account info", "Customer", "Customer", new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Transaction", "Transaction", "Transaction", new { @class = "nav-link" })
+                        </li>
                         
+
+
+
 
                     </ul>
                 </div>
                 <div class="d-lg-block d-none">
-                    <a href="contact.html" class="btn btn-style btn-secondary">Get In Touch</a>
+                    @Html.ActionLink("Get In Touch", "Contact", "Contact", new { @class = "nav-link" })
                 </div>
                 <!-- toggle switch for light and dark theme -->
                 <div class="mobile-position">
@@ -134,11 +150,10 @@
                             <div class="col-md-4 column">
                                 <h3>Company</h3>
                                 <ul class="footer-gd-16">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li>@Html.ActionLink("Home", "index", "Home", new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Contact", new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("About", "About", "About", new { @class = "nav-link" })</li>
+                                    
                                 </ul>
                             </div>
                             <div class="col-md-4 column mt-md-0 mt-4">
@@ -210,6 +225,7 @@
         <button onclick="topFunction()" id="movetop" title="Go to top">
             <span class="fa fa-angle-up"></span>
         </button>
+
         <script>
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function () {
@@ -241,6 +257,7 @@
     </section>
     <!-- //footer -->
     </footer>
+
 
 </body>
 </html>

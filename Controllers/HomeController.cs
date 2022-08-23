@@ -26,5 +26,24 @@ namespace guestTravel.Controllers
 
             return View();
         }
+        public ActionResult Tour()
+        {
+            return View();
+        }
+
+        public ActionResult Customer()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult Transaction()
+        {
+
+
+            return View();
+        }
+
     }
 }

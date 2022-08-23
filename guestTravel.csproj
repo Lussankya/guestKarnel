@@ -323,6 +323,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\_LayoutPage1.cshtml" />
+    <Content Include="Views\Home\Tour.cshtml" />
+    <Content Include="Views\Home\Customer.cshtml" />
+    <Content Include="Views\Home\Transaction.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

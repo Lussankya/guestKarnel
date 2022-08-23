@@ -16906,3 +16906,9 @@ p.count-text {
 
 
 /*# sourceMappingURL=style-freedom.css.map */
+
+
+#map {
+    height: 300px;
+    width: 100%
+}
